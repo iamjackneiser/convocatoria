@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oportunidad de Prácticas - GIGARED Centro S.A.C.</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .logo-banner {
+      background-color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      max-width: 200px;
+      height: auto;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff0000, #000);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .about-section {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 800px;
+      margin: 3rem auto;
+    }
+
+    .about-section h2 {
+      color: #ff0000;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      color: #333;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .about-section .btn-conocenos {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 2rem;
+      background-color: #000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .about-section .btn-conocenos:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .stat {
+      background-color: #000;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      min-width: 120px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .stat:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat h3 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat p {
+      font-size: 1rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    .call-to-action {
+      text-align: center;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+
+    .call-to-action h2 {
+      color: #ff0000;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .call-to-action p {
+      color: #333;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .convocatoria-img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .convocatoria-img:hover {
+      transform: scale(1.03);
+    }
+
+    .areas-section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .areas-section h2 {
+      color: #ff0000;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+
+    .areas {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .area {
+      background-color: #fff;
+      padding: 2rem;
+      border-left: 12px solid #ff0000;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .area:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .banner {
+      /* Removed background-color and simplified to just text styling */
+      color: #000; /* Changed to black for better contrast, can be #ff0000 if preferred */
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .area p {
+      margin: 0.75rem 0;
+      color: #333;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #ff0000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #d40000;
+      transform: scale(1.05);
+    }
+
+    .ubicacion {
+      text-align: center;
+      padding: 3rem;
+      background: linear-gradient(to right, #000, #ff0000);
+      color: white;
+      width: 100;
+    }
+
+    .ubicacion h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .ubicacion a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .ubicacion a:hover {
+      color: #f0f0f0;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .areas {
+        max-width: 50%;
+      }
+
+      .convocatoria-img {
+        max-width: 45%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        font-size: 1.6rem;
+        padding: 2rem 1rem;
+      }
+
+      .logo {
+        max-width: 150px;
+      }
+
+      .area {
+        font-size: 0.95rem;
+      }
+
+      .banner {
+        font-size: 1.4rem;
+      }
+
+      .about-section h2,
+      .call-to-action h2,
+      .areas-section h2 {
+        font-size: 1.5rem;
+      }
+
+      .stats {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .stat {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-banner">
+    <img
+      class="logo"
+      src="https://raw.githubusercontent.com/iamjackneiser/Imagenes-Utilizadas/refs/heads/main/LOGO%20DE%20GIGARED.png"
+      alt="Logo GIGARED Centro S.A.C."
+    />
+  </div>
+
+  <header>
+    Oportunidad de Prácticas Pre Profesionales
+  </header>
+
+  <section class="about-section">
+    <h2>Sobre GIGARED Centro S.A.C.</h2>
+    <p>GIGARED nació con la misión de llevar internet de calidad a precios justos, conectando hogares y negocios al mundo digital sin comprometer la excelencia del servicio. En GIGARED, sabemos que los problemas de conexión no tienen horario, por lo que nuestro equipo técnico está siempre listo para resolver cualquier incidencia de manera rápida y eficiente, asegurando que permanezcas conectado en todo momento.</p>
+    <a href="https://www.gigaredcentro.com/" class="btn-conocenos" target="_blank">Conócenos Más</a>
+    <div class="stats">
+      <div class="stat">
+        <h3 class="counter" data-target="5">0</h3>
+        <p>Años de Experiencia</p>
+      </div>
+      <div class="stat">
+        <h3 class="counter" data-target="1500">0</h3>
+        <p>Clientes Felices</p>
+      </div>
+      <div class="stat">
+        <h3 class="counter" data-target="15">0</h3>
+        <p>Proyectos Completados</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="call-to-action">
+    <h2>¿Estás listo para crecer con nosotros?</h2>
+    <p>¡Esta es tu oportunidad de crecer profesionalmente con GIGARED!</p>
+    <img
+      class="convocatoria-img"
+      src="https://github.com/iamjackneiser/Imagenes-Utilizadas/blob/main/Convocatoria%20laboral.png?raw=true"
+      alt="Convocatoria GIGARED"
+    />
+  </section>
+
+  <section class="areas-section">
+    <h2>Puedes postular a alguna de estas áreas</h2>
+    <div class="areas">
+      <div class="area">
+        <h2 class="banner">Área de Soporte Técnico</h2>
+        <p><strong>Carrera:</strong> Tecnologías de la Información (TI)</p>
+        <p><strong>Funciones:</strong> Brindar asistencia técnica remota a clientes, apoyar digitalmente al equipo operativo y colaborar en procesos de mejora bajo la guía de un mentor especializado.</p>
+        <button onclick="postularWhatsApp('soporte')">Postula aquí</button>
+      </div>
+
+      <div class="area">
+        <h2 class="banner">Área de Almacén y Logística</h2>
+        <p><strong>Carrera:</strong> Administración de Empresas</p>
+        <p><strong>Funciones:</strong> Gestionar el registro de ingreso y salida de equipos, optimizar el sistema de inventario, brindar atención básica al cliente y apoyar al equipo operativo.</p>
+        <button onclick="postularWhatsApp('almacen')">Postula aquí</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="ubicacion">
+    <h3>📍 Ubicación:</h3>
+    <a href="https://maps.app.goo.gl/2jWd3NYsoV9LFSdZ7" target="_blank">
+      Psj. 10 de agosto s/n - Saños Grande (Espaldas de la UTP)
+    </a>
+  </section>
+
+  <footer>
+    © 2025 GIGARED Centro S.A.C. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // Counter Animation
+    function startCounter() {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 100; // Adjust speed by dividing target
+        const updateCounter = () => {
+          if (count < target) {
+            count += increment;
+            counter.textContent = Math.ceil(count);
+            setTimeout(updateCounter, 20); // Animation speed
+          } else {
+            counter.textContent = `+${target}`;
+          }
+        };
+        updateCounter();
+      });
+    }
+
+    // Intersection Observer to trigger counter when stats section is in view
+    const statsSection = document.querySelector('.stats');
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        startCounter();
+        observer.disconnect(); // Run animation only once
+      }
+    }, { threshold: 0.5 });
+    observer.observe(statsSection);
+
+    // WhatsApp Postulation
+    function postularWhatsApp(area) {
+      const telefono = "51999998396";
+      let mensaje = "";
+
+      if (area === "soporte") {
+        mensaje = "Hola, estoy interesado(a) en postular para el área de Soporte Técnico en GIGARED. En breve enviaré mi CV para su evaluación. Quedo atento(a) a su respuesta.";
+      } else if (area === "almacen") {
+        mensaje = "Hola, estoy interesado(a) en postular para el área de Almacén en GIGARED. En breve enviaré mi CV para su evaluación. Quedo atento(a) a su respuesta.";
+      }
+
+      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
