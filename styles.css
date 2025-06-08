@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  color: #000;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(to right, #ff0000, #000);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.convocatoria {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+.convocatoria img {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.areas {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.area {
+  background-color: #f7f7f7;
+  padding: 1.5rem;
+  border-left: 10px solid #ff0000;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.area:hover {
+  transform: scale(1.02);
+}
+
+.banner {
+  background-color: #ff0000;
+  color: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.area p {
+  margin: 0.5rem 0;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #d40000;
+}
+
+.ubicacion {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #000, #ff0000);
+  color: white;
+}
+
+.ubicacion a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .convocatoria {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .areas {
+    flex-direction: column;
+    max-width: 500px;
+  }
+}
